@@ -2,14 +2,14 @@
 # The file name "Splitted_11_12.txt" can be renamed to "11_12.txt", with this sample programme by using Windows Power Shell
 
 
-get-childitem *.txt | foreach { rename-item $_ $_.Name.Replace("Splitted -", "") }
+get-childitem *.txt | foreach { rename-item $_ $_.Name.Replace("Splitted_", "") }
 
 
 get-childitem *.txt
 #list all txt files in the directory, which is then attached to another function "foreach" with | operator.
 
-foreach { rename-item $_ $_.Name.Replace("Splitted -", "") }
+foreach { rename-item $_ $_.Name.Replace("Splitted_", "") }
 
-#reolace Splitted - with nothing "".
+# replaces  "Splitted_" with nothing "".
 
 ## Its possible to use get-childitem to rename any files in the directory the same way, hence to trim the file names
