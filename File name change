@@ -1,4 +1,7 @@
 
+# The file name "Splitted_11_12.txt" can be renamed to "11_12.txt", with this sample programme by using Windows Power Shell
+
+
 get-childitem *.txt | foreach { rename-item $_ $_.Name.Replace("Splitted -", "") }
 
 
